@@ -13,8 +13,20 @@ class MediaPlayer {
         this.video.pause();
     }
 
+    mute() {
+        this.video.muted = true;
+    }
+
+    unmute() {
+        this.video.muted = false;
+    }
+
     togglePlay () {
         this.video.paused ? this.play() : this.pause();
+    }
+
+    toggleMute() {
+        this.video.muted ? this.unmute() : this.mute(); 
     }
 
     _initPlugins() {
