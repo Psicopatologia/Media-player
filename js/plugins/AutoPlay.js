@@ -1,6 +1,9 @@
 class AutoPlay {
     run (player) {
-        player.mute();
+        console.log(player)
+        if (!player.muted) {
+            player.muted = true;
+        }
         player.play();
     }
 }

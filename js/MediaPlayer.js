@@ -30,8 +30,19 @@ class MediaPlayer {
     }
 
     _initPlugins() {
+        const player = {
+            play: () => this.play(),
+            pause: () => this.pause(),
+            video: this.video,
+            get muted() {
+                return this.video.muted;
+            },
+            set muted(value) {
+                this.video.muted = value;
+            }
+        }
         this.plugins.forEach(
-            plugin => plugin.run(this)
+            plugin => plugin.run(player)
         );
     }
  }
