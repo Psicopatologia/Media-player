@@ -12,7 +12,7 @@ play.onclick = () => player.togglePlay();
 mute.onclick = () => player.toggleMute();
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').catch(error => {
+    navigator.serviceWorker.register(new URL('/sw.js', import.meta.url)).catch(error => {
         console.log(error.message)
     })
 } 

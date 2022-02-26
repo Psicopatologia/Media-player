@@ -40,6 +40,11 @@ async function cachedResponse(request) {
 
 async function updateCache(request) {
     const cache = await caches.open(VERSION);
-    const response = fetch(request);
-    return cache.put(request, response)
+    const response = await fetch(request);
+    if(request.url.match("^(http|https)://")){
+        return cache.put(request, response);
+    }
+    else{
+        return;
+    }
 }
