@@ -1,11 +1,20 @@
 class MediaPlayer {
     video: HTMLMediaElement;
     plugins: Array<any>;
+    container: HTMLElement;
 
     constructor (video, plugins=[]) {
         this.video = video;
         this.plugins = plugins;
+        this.initPlayer();
         this.initPlugins();
+    }
+
+    initPlayer() {
+        this.container = document.createElement('div');
+        this.container.style.position = 'relative';
+        this.video.parentNode.insertBefore(this.container, this.video);
+        this.container.appendChild(this.video);
     }
 
     play() {

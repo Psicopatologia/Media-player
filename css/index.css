@@ -41,3 +41,36 @@ main {
 .movie {
   width: 100%;
 }
+
+.ads {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 1em;
+}
+
+.ads_link {
+  background-color: #F5F5F5;
+  width: 80%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  padding: .5em;
+}
+
+.ads_img {
+  height: 8vh;
+  margin-right: 1em;
+}
+
+.ads_title {
+  margin: 0;
+  font-size: 1em;
+}
+
+.ads_body {
+  margin: 0;
+  font-size: .8em;
+}
+
