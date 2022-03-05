@@ -1,7 +1,7 @@
-import MediaPlayer from "./MediaPlayer";
-import AutoPlay from "./plugins/AutoPlay";
-import AutoPause from "./plugins/AutoPause";
-import Ads from "./plugins/ads"
+import MediaPlayer from "@psicopatologia/platzimediaplayer";
+import AutoPlay from "@psicopatologia/platzimediaplayer/lib/plugins/AutoPlay";
+import AutoPause from "@psicopatologia/platzimediaplayer/lib/plugins/AutoPause";
+import Ads from "@psicopatologia/platzimediaplayer/lib/plugins/ads"
 
 const video = document.querySelector("video");
 const playButton: HTMLElement = document.getElementById("play");
